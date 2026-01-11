@@ -9,7 +9,7 @@ class Format(db.Model):
     id = Column(Integer, nullable=False, primary_key=True)
     name = Column(String(100), nullable=False)
     teamsize = Column(Integer, nullable=False)
-    leagues = relationship('Format', backref='league', lazy=True)
+    leagues = relationship('League', backref='format', lazy=True)
 
     def __str__(self):
         return self.name
