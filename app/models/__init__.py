@@ -1,2 +1,3 @@
 from .user import User
-from .product import Product
+from .league import League
+from .format import Format
