@@ -10,7 +10,7 @@ class User(db.Model):
     name = Column(String(100), nullable=False)
     username = Column(String(100), nullable=False, unique=True)
     password = Column(String(100), nullable=False)
-    avt = Column(String(300))
+    avt = Column(String(300), nullable=False, default='https://res.cloudinary.com/dxowugugq/image/upload/v1768168766/aolangfco/avt/default_cnrzp5.jpg')
     participations = relationship('Participation', backref='user', lazy=True)
 
     def __str__(self):
